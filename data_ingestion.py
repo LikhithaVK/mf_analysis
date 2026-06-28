@@ -1,17 +1,10 @@
-"""
-data_ingestion.py
-Day 1 — Mutual Fund Data Ingestion & Validation
-Run from project root: python data_ingestion.py
-"""
-
 import os
 import pandas as pd
 
 RAW = "data/raw"
 
-# ---------------------------------------------------------------------------
 # 1. LOAD ALL CSV DATASETS
-# ---------------------------------------------------------------------------
+
 CSV_FILES = [
     "01_fund_mster.csv",
     "02_nav_history.csv",
@@ -62,9 +55,7 @@ print(f"Loaded {len(dataframes)} / {len(CSV_FILES)} datasets successfully")
 print("=" * 60)
 
 
-# ---------------------------------------------------------------------------
 # 2. EXPLORE FUND MASTER
-# ---------------------------------------------------------------------------
 
 print("\n" + "=" * 60)
 print("FUND MASTER EXPLORATION")
@@ -100,9 +91,7 @@ else:
     print("fund_master.csv not loaded — skipping exploration.")
 
 
-# ---------------------------------------------------------------------------
 # 3. VALIDATE AMFI CODES
-# ---------------------------------------------------------------------------
 
 print("\n" + "=" * 60)
 print("AMFI CODE VALIDATION")

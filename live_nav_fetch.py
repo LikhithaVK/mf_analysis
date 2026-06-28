@@ -1,9 +1,3 @@
-"""
-live_nav_fetch.py
-Day 1 — Live NAV Fetch from mfapi.in
-Run from project root: python live_nav_fetch.py
-"""
-
 import os
 import time
 import requests
@@ -14,9 +8,7 @@ os.makedirs(RAW, exist_ok=True)
 
 BASE_URL = "https://api.mfapi.in/mf/{scheme_code}"
 
-# ---------------------------------------------------------------------------
 # SCHEME REGISTRY
-# ---------------------------------------------------------------------------
 
 SCHEMES = {
     125497: "HDFC Top 100 Direct",
@@ -28,9 +20,7 @@ SCHEMES = {
 }
 
 
-# ---------------------------------------------------------------------------
 # FETCH HELPER
-# ---------------------------------------------------------------------------
 
 def fetch_nav(scheme_code: int, scheme_name: str) -> pd.DataFrame | None:
     """
@@ -78,9 +68,7 @@ def fetch_nav(scheme_code: int, scheme_name: str) -> pd.DataFrame | None:
     return df
 
 
-# ---------------------------------------------------------------------------
 # MAIN
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     print("=" * 60)
